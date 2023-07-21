@@ -106,10 +106,8 @@ const Sidebar = ({
     const theme = useTheme();
 
     useEffect(() => {
-        console.log(isSidebarOpen)
-        console.log(user)
         setActive(pathname.substring(1));
-    }, [pathname, isSidebarOpen]);
+    }, [pathname, isSidebarOpen]); // eslint-disable-next-line react-hooks/exhaustive-deps
   return <Box component="nav">
     {isSidebarOpen &&
         <Drawer

@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import mongoose, { mongo } from 'mongoose';
+import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import helment from 'helmet';
@@ -17,7 +17,8 @@ import User from './models/User.js';
 import Product from './models/Products.js';
 import productStat from './models/ProductStats.js';
 import Transaction from './models/Transaction.js';
-import { dataUser, dataProduct, dataProductStat, dataTransaction } from './data/index.js';
+import OverallStat from './models/OverallStats.js'
+import { dataUser, dataProduct, dataProductStat, dataTransaction, dataOverallStat } from './data/index.js';
 
 
 /* CONFIGURATION */
@@ -51,4 +52,5 @@ mongoose.connect(process.env.MONGO_URL, {
     // productStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
     // User.insertMany(dataUser)
+    OverallStat.insertMany(dataOverallStat);
 }).catch(error => console.error(`${error} didnt connect`))
