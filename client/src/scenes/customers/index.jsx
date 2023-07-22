@@ -7,7 +7,6 @@ import { DataGrid } from '@mui/x-data-grid';
 const Customers = () => {
   const theme = useTheme();
   const { data, isLoading } = useGetCustomersQuery();
-  console.log(data);
 
   const columns = [
     {
@@ -48,7 +47,7 @@ const Customers = () => {
       headerName: "Role",
       flex: 0.5
     }
-  ]
+  ];
 
   return (
     <Box m="1.5rem 2.5rem">
