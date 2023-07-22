@@ -64,7 +64,7 @@ const navItems = [
         icon: null
     },
     {
-        text: 'OVerview',
+        text: 'Overview',
         icon: <PointOfSaleOutlined />
     },
     {
@@ -84,7 +84,7 @@ const navItems = [
         icon: null
     },
     {
-        text: 'Admin',
+        text: 'Admins',
         icon: <AdminPanelSettingsOutlined />
     },
     {

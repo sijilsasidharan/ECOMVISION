@@ -14,6 +14,7 @@ import Geography from 'scenes/geography';
 import Overview from 'scenes/overview';
 import Daily from 'scenes/daily';
 import Monthly from 'scenes/monthly';
+import Breakdown from 'scenes/breakdown';
 
 function App() {
   const mode = useSelector(state => state.global.mode);
