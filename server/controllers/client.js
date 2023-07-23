@@ -6,7 +6,6 @@ import User from '../models/User.js';
 import getCountryIso3 from 'country-iso-2-to-3';
 
 export const getProducts = async (req, res) => {
-    console.log('Products');
     try {
         const products = await Product.find();
         const productsWithStats = await Promise.all(
@@ -29,7 +28,6 @@ export const getProducts = async (req, res) => {
 export const getCustomers = async (req, res) => {
     try {
         const customers = await User.find({ role: 'user' }).select('-password');
-        console.log(customers)
         res.status(200).json(customers);
     } catch (error) {
         // res.status(404).json({ message: error.message })
